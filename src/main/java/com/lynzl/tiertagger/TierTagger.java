@@ -69,8 +69,19 @@ public class TierTagger implements ModInitializer {
         TierCache.init();
 
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registry) -> {
+            // Register the command under /mctiertagger
             dispatcher.register(
                     literal(MOD_ID)
+                            .then(argument("player", StringArgumentType.string()) // Changed argument type to String
+                                    .executes(TierTagger::displayTierInfo))
+                            .then(literal("open")
+                                    .then(argument("player", StringArgumentType.string()) // Changed argument type to String
+                                            .executes(TierTagger::openPlayerInfoScreen)))
+            );
+
+            // Register the same command under /tiertagger as an alias
+            dispatcher.register(
+                    literal("tiertagger")
                             .then(argument("player", StringArgumentType.string()) // Changed argument type to String
                                     .executes(TierTagger::displayTierInfo))
                             .then(literal("open")
