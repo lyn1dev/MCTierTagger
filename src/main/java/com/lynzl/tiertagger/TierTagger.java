@@ -205,7 +205,7 @@ public class TierTagger implements ModInitializer {
                         .withColor(Formatting.GRAY)
                         .withItalic(true)
                         .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal("Click to see more info about " + info.name())))
-                        .withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/tiertagger open " + playerName))
+                        .withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/mctiertagger open " + playerName))
                 );
 
         text.append(moreDetails);
