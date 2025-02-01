@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mc-tier-tagger",
+  "version": "${version}",
+  "name": "MCTierTagger",
+  "description": "A minecraft fabric mod which displays everyone's tier from the MCTiers tierlist owned by Encz and Lurrn in game",
+  "authors": ["lynzl","netiyiy", "uku"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/tier-tagger/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.lynzl.tiertagger.TierTagger"
+    ],
+    "ukulib": [
+      "com.lynzl.tiertagger.config.UkulibIntegration"
+    ]
+  },
+  "mixins": [
+    "TierTagger.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16",
+    "minecraft": ">=1.21.2",
+    "ukulib": "^1.5.0"
+  }
+}
