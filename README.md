@@ -1,4 +1,6 @@
 # MCTierTagger
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/lyn1dev/MCTierTagger/total)
+https://img.shields.io/badge/very-sigma-blue
 A convenient minecraft fabric mod which displays everyone's tier from the MCTiers tierlist owned by Encz and Lurrn in game.
 
 Showcase:
